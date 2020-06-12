@@ -3,19 +3,30 @@
   "displayName": "Panda Utils",
   "description": "Tools picked from various extensions",
   "version": "0.1.0",
-  "publisher": "eankeen",
+  "publisher": "EdwinKofler",
   "engines": {
+    "node": "^10.20.0 || ^12.17.0 || ^14.3.0",
+    "pnpm": "^5.0.0",
     "vscode": "^1.12.0"
   },
   "license": "MIT",
+  "homepage": "https://github.com/eankeen/vscode-panda-utils/tree/master#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/eankeen/vscode-panda-utils"
+  },
+  "bugs": {
+    "url": "https://github.com/eankeen/vscode-panda-utils/issues"
+  },
+  "author": {
+    "name": "Edwin Kofler",
+    "url": "https://edwinkofler.com"
   },
   "categories": [
     "Snippets"
   ],
   "scripts": {
+    "test": "",
     "build": "node ./build.js"
   },
   "icon": "images/icon.jpg",
