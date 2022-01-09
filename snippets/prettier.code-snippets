@@ -1,0 +1,21 @@
+{
+	"prettier-config": {
+		"prefix": "prettier-config",
+		"body": [
+			"{",
+			"\t\"semi\": false,",
+			"\t\"singleQuote\": true,",
+			"\t\"trailingComma\": \"all\"",
+			"}",
+			""
+		]
+	},
+	"prettier-ignore": {
+		"prefix": "prettier-ignore",
+		"body": ["$LINE_COMMENT prettier-ignore"]
+	},
+	"prettier-ignore-embedded": {
+		"prefix": "prettier-ignore-embedded",
+		"body": ["$BLOCK_COMMENT_START prettier-ignore $BLOCK_COMMENT_END"]
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"eslint-config": {
+		"prefix": "eslint-config",
+		"body": [
+			"{",
+			"\t\"plugins\": [],",
+			"\t\"extends\": [",
+			"\t\t\"eslint:recommended\"",
+			"\t]",
+			"}",
+			""
+		]
+	},
+	"eslint-disable-line": {
+		"prefix": "eslint-disable-line",
+		"body": ["$LINE_COMMENT eslint-disable-line ${0:rule}"],
+		"description": "ESLint disable line"
+	},
+	"eslint-disable-next-line": {
+		"prefix": "eslint-disable-next-line",
+		"body": ["$LINE_COMMENT eslint-disable-next-line ${0:rule}"],
+		"description": "ESLint disable next line"
+	}
+}
