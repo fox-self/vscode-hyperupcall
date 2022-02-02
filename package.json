@@ -9,7 +9,7 @@
 		"pnpm": "^5.0.0",
 		"vscode": "^1.12.0"
 	},
-	"license": "BSD-3-Clase",
+	"license": "BSD-3-Clause",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/hyperupcall/vscode-panda-utils"
