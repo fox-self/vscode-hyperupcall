@@ -22,7 +22,7 @@ export function activate(context: VSCODE.ExtensionContext) {
 		constructor(
 			schema: ISchema,
 			document: VSCODE.TextDocument,
-			position: VSCODE.Position
+			position: VSCODE.Position,
 		) {
 			super(schema.label, VSCODE.CompletionItemKind.Snippet)
 			const reg = /\$\{([^\}]+)\}/
@@ -71,7 +71,7 @@ export function activate(context: VSCODE.ExtensionContext) {
 					provideCompletionItems: (
 						document: VSCODE.TextDocument,
 						position: VSCODE.Position,
-						token: VSCODE.CancellationToken
+						token: VSCODE.CancellationToken,
 					) => {
 						const completes: CommentCompletionItem[] = []
 						const line = document.lineAt(position.line).text
@@ -80,7 +80,11 @@ export function activate(context: VSCODE.ExtensionContext) {
 							// if line a new line
 							if (position.character === 1) {
 								completes.push(
-									new CommentCompletionItem(schema, document, position)
+									new CommentCompletionItem(
+										schema,
+										document,
+										position,
+									),
 								)
 								continue
 							}
@@ -88,7 +92,11 @@ export function activate(context: VSCODE.ExtensionContext) {
 							// the the whole line match
 							if (new RegExp('^' + schema.style.source).test(line)) {
 								completes.push(
-									new CommentCompletionItem(schema, document, position)
+									new CommentCompletionItem(
+										schema,
+										document,
+										position,
+									),
 								)
 								continue
 							}
@@ -98,16 +106,26 @@ export function activate(context: VSCODE.ExtensionContext) {
 							if (validMatcher) {
 								if (validMatcher[0].length >= 2) {
 									completes.push(
-										new CommentCompletionItem(schema, document, position)
+										new CommentCompletionItem(
+											schema,
+											document,
+											position,
+										),
 									)
 									continue
 								}
 							}
 
-							const validRegWithSpace = new RegExp('\\s' + schema.style.source)
+							const validRegWithSpace = new RegExp(
+								'\\s' + schema.style.source,
+							)
 							if (validRegWithSpace.test(prefix)) {
 								completes.push(
-									new CommentCompletionItem(schema, document, position)
+									new CommentCompletionItem(
+										schema,
+										document,
+										position,
+									),
 								)
 								continue
 							}
@@ -115,8 +133,8 @@ export function activate(context: VSCODE.ExtensionContext) {
 						return completes
 					},
 				},
-				...s.triggerCharacters
-			)
+				...s.triggerCharacters,
+			),
 		)
 	}
 }
