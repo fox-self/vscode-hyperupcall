@@ -1,0 +1,27 @@
+{
+	"basalt-config": {
+		"prefix": "eslint-config",
+		"body": [
+			"[package]",
+			"name = '${1:name}'",
+			"slug = ''",
+			"version = '0.1.0'",
+			"authors = ['Edwin Kofler <edwin@kofler.dev>']",
+			"description = ''",
+			"",
+			"[run]",
+			"dependencies = []",
+			"sourceDirs = []",
+			"",
+			"[run.shellEnvironment]",
+			"",
+			"[run.setOptions]",
+			"errexit = 'on'",
+			"pipefail = 'on'",
+			"",
+			"[run.shoptOptions]",
+			"shift_verbose = 'on'",
+			""
+		]
+	}
+}

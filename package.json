@@ -27,6 +27,9 @@
 	"contributes": {
 		"snippets": [
 			{
+				"path": "./snippets/basalt.code-snippets"
+			},
+			{
 				"path": "./snippets/editorconfig.code-snippets"
 			},
 			{
