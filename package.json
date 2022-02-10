@@ -25,6 +25,27 @@
 	"scripts": {},
 	"icon": "images/icon.jpg",
 	"contributes": {
+		"languages": [
+			{
+				"id": "dircolors",
+				"aliases": [
+					"dircolors",
+					"LS_COLORS"
+				],
+				"extensions": [
+					".dircolors",
+					".dir_colors"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "dircolors",
+				"scopeName": "source.dircolors",
+				"path": "./syntaxes/dircolors.tmLanguage.json"
+			}
+		],
 		"snippets": [
 			{
 				"path": "./snippets/basalt.code-snippets"
