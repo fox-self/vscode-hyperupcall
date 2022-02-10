@@ -1,8 +1,9 @@
 {
 	"basalt-config": {
-		"prefix": "eslint-config",
+		"prefix": "basalt-config",
 		"body": [
 			"[package]",
+			"type = 'bash'",
 			"name = '${1:name}'",
 			"slug = ''",
 			"version = '0.1.0'",
