@@ -16,8 +16,9 @@ Autocomplete for
 Syntax highlighting for
 
 - dircolors
-- xresources
-- terminfo (WIP)
+- i3
+- terminfo
+- Xresources
 
 ## Contributing
 
@@ -46,3 +47,4 @@ pnpm test
 - [vscode-dircolors](https://github.com/duniul/vscode-dircolors) by duniul (MIT)
 - [terminfo.sublime-syntax](https://github.com/zgracem/terminfo.sublime-syntax) (MIT)
 - [xresources](https://github.com/antcap96/xresources) (MIT)
+- [i3wm-syntax](https://github.com/dcasella/i3wm-syntax) (Apache-2.0)

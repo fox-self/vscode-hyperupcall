@@ -39,16 +39,11 @@
 				"configuration": "./language-configuration/dircolors.language-configuration.json"
 			},
 			{
-				"id": "xdefaults",
+				"id": "i3",
 				"aliases": [
-					"Xdefaults",
-					"xdefaults"
+					"i3"
 				],
-				"extensions": [
-					".Xresources",
-					".xresources"
-				],
-				"configuration": "./language-configuration/xresources.language-configuration.json"
+				"configuration": "./language-configuration/i3.language-configuration.json"
 			},
 			{
 				"id": "terminfo",
@@ -59,6 +54,18 @@
 					".src"
 				],
 				"configuration": "./language-configuration/terminfo.language-configuration.json"
+			},
+			{
+				"id": "xdefaults",
+				"aliases": [
+					"Xdefaults",
+					"xdefaults"
+				],
+				"extensions": [
+					".Xresources",
+					".xresources"
+				],
+				"configuration": "./language-configuration/xresources.language-configuration.json"
 			}
 		],
 		"grammars": [
@@ -68,14 +75,19 @@
 				"path": "./syntaxes/dircolors.tmLanguage.json"
 			},
 			{
-				"language": "xdefaults",
-				"scopeName": "source.xdefaults",
-				"path": "./syntaxes/xdefaults.tmLanguage.json"
+				"language": "i3",
+				"scopeName": "source.i3",
+				"path": "./syntaxes/i3.tmLanguage"
 			},
 			{
 				"language": "terminfo",
 				"scopeName": "source.terminfo",
 				"path": "./syntaxes/terminfo.tmLanguage.json"
+			},
+			{
+				"language": "xdefaults",
+				"scopeName": "source.xdefaults",
+				"path": "./syntaxes/xdefaults.tmLanguage.json"
 			}
 		],
 		"snippets": [
