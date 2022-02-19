@@ -77,7 +77,7 @@
 			{
 				"language": "i3",
 				"scopeName": "source.i3",
-				"path": "./syntaxes/i3.tmLanguage"
+				"path": "./syntaxes/i3.tmLanguage.json"
 			},
 			{
 				"language": "terminfo",
