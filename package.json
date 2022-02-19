@@ -36,7 +36,26 @@
 					".dircolors",
 					".dir_colors"
 				],
-				"configuration": "./language-configuration.json"
+				"configuration": "./language-configuration/dircolors.language-configuration.json"
+			},
+			{
+				"id": "xdefaults",
+				"aliases": [
+					"Xdefaults",
+					"xdefaults"
+				],
+				"extensions": [
+					".Xresources",
+					".xresources"
+				],
+				"configuration": "./language-configuration/xresources.language-configuration.json"
+			},
+			{
+				"id": "terminfo",
+				"extensions": [
+					".src"
+				],
+				"configuration": "./language-configuration/terminfo.language-configuration.json"
 			}
 		],
 		"grammars": [
@@ -44,6 +63,16 @@
 				"language": "dircolors",
 				"scopeName": "source.dircolors",
 				"path": "./syntaxes/dircolors.tmLanguage.json"
+			},
+			{
+				"language": "xdefaults",
+				"scopeName": "source.xdefaults",
+				"path": "./syntaxes/xdefaults.tmLanguage.json"
+			},
+			{
+				"language": "terminfo",
+				"scopeName": "source.terminfo",
+				"path": "./syntaxes/terminfo.tmLanguage.json"
 			}
 		],
 		"snippets": [

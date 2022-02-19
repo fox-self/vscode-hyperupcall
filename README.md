@@ -6,16 +6,18 @@ Install [extension](https://marketplace.visualstudio.com/items?itemName=EdwinKof
 
 Autocomplete for
 
--  ESLint
--  Stylelint
--  Prettier
--  Typescript
--  Webpack
--  JSX
+- ESLint
+- Stylelint
+- Prettier
+- Typescript
+- Webpack
+- JSX
 
 Syntax highlighting for
 
--  dircolors
+- dircolors
+- xresources
+- terminfo (WIP)
 
 ## Contributing
 
@@ -37,8 +39,10 @@ pnpm test
 
 ## Acknowledgements
 
--  [comment-autocomplete](https://github.com/axetroy/vscode-comment-autocomplete) by axetroy (MIT)
--  [eslint-disable-snippets](https://github.com/drKnoxy/eslint-disable-snippets) by drKnoxy (MIT)
--  [stylelint-disable-snippets](https://github.com/hedinne/stylelint-disable-snippets) by hedinne (ISC)
--  [webpack-snippets](https://github.com/LiShiSangZi/webpack-snippets) by LiShiSangZi (MIT)
--  [vscode-dircolors](https://github.com/duniul/vscode-dircolors) by duniul (MIT)
+- [comment-autocomplete](https://github.com/axetroy/vscode-comment-autocomplete) by axetroy (MIT)
+- [eslint-disable-snippets](https://github.com/drKnoxy/eslint-disable-snippets) by drKnoxy (MIT)
+- [stylelint-disable-snippets](https://github.com/hedinne/stylelint-disable-snippets) by hedinne (ISC)
+- [webpack-snippets](https://github.com/LiShiSangZi/webpack-snippets) by LiShiSangZi (MIT)
+- [vscode-dircolors](https://github.com/duniul/vscode-dircolors) by duniul (MIT)
+- [terminfo.sublime-syntax](https://github.com/zgracem/terminfo.sublime-syntax) (MIT)
+- [xresources](https://github.com/antcap96/xresources) (MIT)
