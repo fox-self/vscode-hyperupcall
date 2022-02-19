@@ -2,16 +2,19 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"scopeName": "source.terminfo",
 	"name": "terminfo",
-	"fileTypes": ["terminfo.src", "emx.src"],
 	"patterns": [
 		{
-			"begin": "#",
-			"beginCaptures": {
-				"0": {
-					"name": "comment.line"
-				}
-			},
-			"end": "\\n"
+			"include": "#comments"
 		}
-	]
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment",
+					"match": "^#.*$"
+				}
+			]
+		}
+	}
 }
