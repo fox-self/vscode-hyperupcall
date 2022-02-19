@@ -48,3 +48,8 @@ pnpm test
 - [terminfo.sublime-syntax](https://github.com/zgracem/terminfo.sublime-syntax) (MIT)
 - [xresources](https://github.com/antcap96/xresources) (MIT)
 - [i3wm-syntax](https://github.com/dcasella/i3wm-syntax) (Apache-2.0)
+
+## Roadmap
+
+- Ingtegrate [vscode-tmlanguage](https://github.com/Togusa09/vscode-tmlanguage)?
+- Remove `i3.tmPreferences`?

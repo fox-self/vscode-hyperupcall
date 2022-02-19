@@ -55,7 +55,11 @@ __bake_trap_err() {
 # @exitcode 1 if should not print color
 # @internal
 __bake_is_color() {
-	! [[ -v NO_COLOR || $TERM == dumb ]]
+	if [[ -v NO_COLOR || $TERM == dumb ]]; then
+		return 1
+	else
+		return 0
+	fi
 }
 
 # @description Prints `$1` formatted as an internal Bake error to standard error
@@ -66,6 +70,17 @@ __bake_internal_error() {
 		printf "\033[0;31m%s:\033[0m %s\n" "Error (bake)" "$1"
 	else
 		printf '%s: %s\n' 'Error (bake)' "$1"
+	fi
+} >&2
+
+# @description Prints `$1` formatted as an internal Bake warning to standard error
+# @arg $1 Text to print
+# @internal
+__bake_internal_warn() {
+	if __bake_is_color; then
+		printf "\033[0;33m%s:\033[0m %s\n" "Warn (bake)" "$1"
+	else
+		printf '%s: %s\n' 'Warn (bake)' "$1"
 	fi
 } >&2
 
@@ -232,9 +247,17 @@ bake.info() {
 	fi
 }
 
+# @description Dies if any of the supplied variables are empty. Deprecated in favor of 'bake.assert_not_empty'
+# @arg $@ string Variable names to print
+# @see bake.assert_not_empty
+bake.assert_nonempty() {
+	__bake_internal_warn "Function 'bake.assert_nonempty' is deprecated. Please use 'bake.assert_not_empty' instead"
+	bake.assert_not_empty
+}
+
 # @description Dies if any of the supplied variables are empty
 # @arg $@ string Variable names to print
-bake.assert_nonempty() {
+bake.assert_not_empty() {
 	local variable_name=
 	for variable_name; do
 		local -n variable="$variable_name"
@@ -268,7 +291,7 @@ bake.cfg() {
 
 	case $cfg in
 		stacktrace)
-			__bake_cfg_stacktrace=$2
+			__bake_cfg_stacktrace=$value
 	esac
 }
 
