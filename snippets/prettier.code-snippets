@@ -3,7 +3,6 @@
 		"prefix": "prettier-config",
 		"body": [
 			"{",
-			"\t\"tabWidth\": 3,",
 			"\t\"useTabs\": true,",
 			"\t\"semi\": false,",
 			"\t\"singleQuote\": true,",
