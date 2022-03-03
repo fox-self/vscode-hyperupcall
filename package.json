@@ -2,7 +2,7 @@
 	"name": "vscode-panda-utils",
 	"displayName": "Panda Utils",
 	"description": "Tools picked from various extensions",
-	"version": "0.6.0",
+	"version": "0.6.1",
 	"publisher": "EdwinKofler",
 	"engines": {
 		"vscode": "^1.12.0"
