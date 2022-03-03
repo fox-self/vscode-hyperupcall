@@ -4,19 +4,20 @@
 
 Install [extension](https://marketplace.visualstudio.com/items?itemName=EdwinKofler.vscode-panda-utils)
 
-Autocomplete for
+Snippets for
 
+- Basalt
+- EditorConfig
 - ESLint
-- Stylelint
 - Prettier
-- Typescript
+- Stylelint
 - Webpack
-- JSX
 
 Syntax highlighting for
 
 - dircolors
 - i3
+- Ninja
 - terminfo
 - Xresources
 
@@ -48,6 +49,7 @@ pnpm test
 - [terminfo.sublime-syntax](https://github.com/zgracem/terminfo.sublime-syntax) (MIT)
 - [xresources](https://github.com/antcap96/xresources) (MIT)
 - [i3wm-syntax](https://github.com/dcasella/i3wm-syntax) (Apache-2.0)
+- [vscode-ninja-syntax](https://github.com/melak47/vscode-ninja-syntax) (MIT)
 
 ## Roadmap
 
