@@ -50,8 +50,3 @@ pnpm test
 - [xresources](https://github.com/antcap96/xresources) by antcap96 (MIT)
 - [i3wm-syntax](https://github.com/dcasella/i3wm-syntax) by dcasella (Apache-2.0)
 - [vscode-ninja-syntax](https://github.com/melak47/vscode-ninja-syntax) by melak47 (MIT)
-
-## Roadmap
-
-- Ingtegrate [vscode-tmlanguage](https://github.com/Togusa09/vscode-tmlanguage)?
-- Remove `i3.tmPreferences`?
