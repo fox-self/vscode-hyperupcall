@@ -18,6 +18,7 @@ Syntax highlighting for
 - dircolors
 - i3
 - Ninja
+- sxhkdrc
 - terminfo
 - Xresources
 
@@ -50,3 +51,4 @@ pnpm test
 - [xresources](https://github.com/antcap96/xresources) by antcap96 (MIT)
 - [i3wm-syntax](https://github.com/dcasella/i3wm-syntax) by dcasella (Apache-2.0)
 - [vscode-ninja-syntax](https://github.com/melak47/vscode-ninja-syntax) by melak47 (MIT)
+- [sxhkdrc-syntax](https://github.com/mosbasik/sxhkdrc-syntax) by mosbasik (MIT)

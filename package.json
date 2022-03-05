@@ -29,8 +29,7 @@
 			{
 				"id": "dircolors",
 				"aliases": [
-					"dircolors",
-					"LS_COLORS"
+					"dir_colors"
 				],
 				"extensions": [
 					".dircolors",
@@ -41,7 +40,10 @@
 			{
 				"id": "i3",
 				"aliases": [
-					"i3"
+					"i3_config"
+				],
+				"extensions": [
+					".i3.config"
 				],
 				"configuration": "./language-configuration/i3.language-configuration.json"
 			},
@@ -56,11 +58,22 @@
 				"configuration": "./language-configuration/ninja.language-configuration.json"
 			},
 			{
+				"id": "sxhkdrc",
+				"aliases": [
+					"sxhkdrc"
+				],
+				"extensions": [
+					".sxhkdrc.conf"
+				],
+				"configuration": "./language-configuration/sxhkdrc.language-configuration.json"
+			},
+			{
 				"id": "terminfo",
 				"aliases": [
 					"termcap"
 				],
 				"extensions": [
+					".termcap",
 					".src"
 				],
 				"configuration": "./language-configuration/terminfo.language-configuration.json"
@@ -73,7 +86,9 @@
 				],
 				"extensions": [
 					".Xresources",
-					".xresources"
+					".xresources",
+					".Xdefaults",
+					".xdefaults"
 				],
 				"configuration": "./language-configuration/xresources.language-configuration.json"
 			}
@@ -93,6 +108,11 @@
 				"language": "ninja",
 				"scopeName": "source.ninja",
 				"path": "./syntaxes/ninja.tmLanguage.json"
+			},
+			{
+				"language": "sxhkdrc",
+				"scopeName": "source.sxhkdrc",
+				"path": "./syntaxes/sxhkdrc.tmLanguage.json"
 			},
 			{
 				"language": "terminfo",
