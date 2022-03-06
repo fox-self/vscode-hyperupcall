@@ -143,6 +143,9 @@
 			},
 			{
 				"path": "./snippets/webpack.code-snippets"
+			},
+			{
+				"path": "./snippets/settings.code-snippets"
 			}
 		]
 	},
