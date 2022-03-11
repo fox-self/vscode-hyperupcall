@@ -20,12 +20,26 @@
 		"url": "https://edwinkofler.com"
 	},
 	"categories": [
-		"Snippets"
+		"Snippets",
+		"Programming Languages"
 	],
 	"scripts": {},
 	"icon": "images/icon.jpg",
 	"contributes": {
 		"languages": [
+			{
+				"id": "desktop",
+				"aliases": [
+					"Desktop",
+					"desktop"
+				],
+				"firstLine": "^\\[Desktop Entry\\]",
+				"extensions": [
+					".desktop",
+					".theme"
+				],
+				"configuration": "./language-configuration/desktop.language-configuration.json"
+			},
 			{
 				"id": "dircolors",
 				"aliases": [
@@ -94,6 +108,11 @@
 			}
 		],
 		"grammars": [
+			{
+				"language": "desktop",
+				"scopeName": "source.desktop",
+				"path": "./syntaxes/desktop.tmLanguage.json"
+			},
 			{
 				"language": "dircolors",
 				"scopeName": "source.dircolors",

@@ -7,14 +7,17 @@ Install [extension](https://marketplace.visualstudio.com/items?itemName=EdwinKof
 Snippets for
 
 - Basalt
+- Desktop Files
 - EditorConfig
 - ESLint
 - Prettier
+- `settings.json`
 - Stylelint
 - Webpack
 
 Syntax highlighting for
 
+- Desktop Files
 - dircolors
 - i3
 - Ninja
@@ -52,3 +55,4 @@ pnpm test
 - [i3wm-syntax](https://github.com/dcasella/i3wm-syntax) by dcasella (Apache-2.0)
 - [vscode-ninja-syntax](https://github.com/melak47/vscode-ninja-syntax) by melak47 (MIT)
 - [sxhkdrc-syntax](https://github.com/mosbasik/sxhkdrc-syntax) by mosbasik (MIT)
+- [desktop-file-support](https://github.com/nico-castell/desktop-file-support) by nico-castell (MIT)
