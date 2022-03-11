@@ -27,20 +27,9 @@ Syntax highlighting for
 
 ## Contributing
 
-### Installation
-
 ```sh
 git clone https://github.com/eankeen/vscode-foxxy-extension
 cd vscode-foxxy-extension
-```
-
-### [Testing](https://code.visualstudio.com/api/working-with-extensions/testing-extension)
-
-`Ctrl+Shift+D` "Launch Extension"
-`Ctrl+R` to reload after changes
-
-```sh
-pnpm test
 ```
 
 ## Acknowledgements

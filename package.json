@@ -23,7 +23,6 @@
 		"Snippets",
 		"Programming Languages"
 	],
-	"scripts": {},
 	"icon": "images/icon.jpg",
 	"contributes": {
 		"languages": [
