@@ -23,6 +23,11 @@
 		"Snippets",
 		"Programming Languages"
 	],
+	"keywords": [
+		"Linux",
+		"Systemd",
+		"Configurations"
+	],
 	"icon": "images/icon.jpg",
 	"contributes": {
 		"languages": [
@@ -94,6 +99,32 @@
 				"configuration": "./language-configuration/sxhkdrc.language-configuration.json"
 			},
 			{
+				"id": "systemd-conf",
+				"aliases": [
+					"Systemd Configuration",
+					"systemd-conf",
+					"systemd-unit-file"
+				],
+				"extensions": [
+					".link",
+					".netdev",
+					".network",
+					".service",
+					".socket",
+					".device",
+					".mount",
+					".automount",
+					".swap",
+					".target",
+					".path",
+					".timer",
+					".snapshot",
+					".slice",
+					".scope"
+				],
+				"configuration": "./language-configuration/systemd.language-configuration.json"
+			},
+			{
 				"id": "terminfo",
 				"aliases": [
 					"termcap"
@@ -151,6 +182,11 @@
 				"path": "./syntaxes/sxhkdrc.tmLanguage.json"
 			},
 			{
+				"language": "systemd-conf",
+				"scopeName": "source.systemd",
+				"path": "./syntaxes/systemd.tmLanguage.json"
+			},
+			{
 				"language": "terminfo",
 				"scopeName": "source.terminfo",
 				"path": "./syntaxes/terminfo.tmLanguage.json"
@@ -204,7 +240,8 @@
 				"key": "alt+shift+n",
 				"when": "editorTextFocus && resourceLangId == po"
 			}
-		]
+		],
+		"configuration": []
 	},
 	"devDependencies": {
 		"prettier": "^2.5.1"

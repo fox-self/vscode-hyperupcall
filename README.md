@@ -21,7 +21,9 @@ Syntax highlighting for
 - dircolors
 - i3
 - Ninja
+- gettext
 - sxhkdrc
+- systemd
 - terminfo
 - Xresources
 
@@ -46,3 +48,8 @@ cd vscode-foxxy-extension
 - [sxhkdrc-syntax](https://github.com/mosbasik/sxhkdrc-syntax) by mosbasik (MIT)
 - [desktop-file-support](https://github.com/nico-castell/desktop-file-support) by nico-castell (MIT)
 - [vscode-gettext](https://github.com/MrOrz/vscode-gettext) by MrOrz (MIT)
+- [vscode-systemd](https://github.com/hangxingliu/vscode-systemd) by hangxingliu (MIT)
+
+## Roadmap
+
+- Import systemd intelisense code
