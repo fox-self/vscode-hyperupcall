@@ -45,3 +45,4 @@ cd vscode-foxxy-extension
 - [vscode-ninja-syntax](https://github.com/melak47/vscode-ninja-syntax) by melak47 (MIT)
 - [sxhkdrc-syntax](https://github.com/mosbasik/sxhkdrc-syntax) by mosbasik (MIT)
 - [desktop-file-support](https://github.com/nico-castell/desktop-file-support) by nico-castell (MIT)
+- [vscode-gettext](https://github.com/MrOrz/vscode-gettext) by MrOrz (MIT)

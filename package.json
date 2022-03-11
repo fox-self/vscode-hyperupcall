@@ -71,6 +71,19 @@
 				"configuration": "./language-configuration/ninja.language-configuration.json"
 			},
 			{
+				"id": "po",
+				"aliases": [
+					"gettext",
+					"po"
+				],
+				"extensions": [
+					".po",
+					".pot",
+					".potx"
+				],
+				"configuration": "./language-configuration/po.language-configuration.json"
+			},
+			{
 				"id": "sxhkdrc",
 				"aliases": [
 					"sxhkdrc"
@@ -128,6 +141,11 @@
 				"path": "./syntaxes/ninja.tmLanguage.json"
 			},
 			{
+				"language": "po",
+				"scopeName": "source.po",
+				"path": "./syntaxes/po.tmLanguage.json"
+			},
+			{
 				"language": "sxhkdrc",
 				"scopeName": "source.sxhkdrc",
 				"path": "./syntaxes/sxhkdrc.tmLanguage.json"
@@ -173,6 +191,18 @@
 			{
 				"language": "json",
 				"path": "./snippets/settings.code-snippets"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "vscgettext.moveToNextUntranslated",
+				"key": "alt+n",
+				"when": "editorTextFocus && resourceLangId == po"
+			},
+			{
+				"command": "vscgettext.moveToPreviousUntranslated",
+				"key": "alt+shift+n",
+				"when": "editorTextFocus && resourceLangId == po"
 			}
 		]
 	},

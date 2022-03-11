@@ -1,4 +1,5 @@
 'use strict'
+
 import VSCODE = require('vscode')
 import { schemas, ISchema } from './schema'
 
@@ -80,11 +81,7 @@ export function activate(context: VSCODE.ExtensionContext) {
 							// if line a new line
 							if (position.character === 1) {
 								completes.push(
-									new CommentCompletionItem(
-										schema,
-										document,
-										position,
-									),
+									new CommentCompletionItem(schema, document, position),
 								)
 								continue
 							}
@@ -92,11 +89,7 @@ export function activate(context: VSCODE.ExtensionContext) {
 							// the the whole line match
 							if (new RegExp('^' + schema.style.source).test(line)) {
 								completes.push(
-									new CommentCompletionItem(
-										schema,
-										document,
-										position,
-									),
+									new CommentCompletionItem(schema, document, position),
 								)
 								continue
 							}
@@ -106,26 +99,16 @@ export function activate(context: VSCODE.ExtensionContext) {
 							if (validMatcher) {
 								if (validMatcher[0].length >= 2) {
 									completes.push(
-										new CommentCompletionItem(
-											schema,
-											document,
-											position,
-										),
+										new CommentCompletionItem(schema, document, position),
 									)
 									continue
 								}
 							}
 
-							const validRegWithSpace = new RegExp(
-								'\\s' + schema.style.source,
-							)
+							const validRegWithSpace = new RegExp('\\s' + schema.style.source)
 							if (validRegWithSpace.test(prefix)) {
 								completes.push(
-									new CommentCompletionItem(
-										schema,
-										document,
-										position,
-									),
+									new CommentCompletionItem(schema, document, position),
 								)
 								continue
 							}
