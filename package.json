@@ -2,7 +2,7 @@
 	"name": "vscode-panda-utils",
 	"displayName": "Panda Utils",
 	"description": "Tools picked from various extensions",
-	"version": "0.7.1",
+	"version": "0.8.0",
 	"publisher": "EdwinKofler",
 	"engines": {
 		"vscode": "^1.12.0"
@@ -149,21 +149,30 @@
 				"path": "./snippets/basalt.code-snippets"
 			},
 			{
+				"language": "desktop",
+				"path": "./snippets/desktop.code-snippets"
+			},
+			{
+				"language": "editorconfig",
 				"path": "./snippets/editorconfig.code-snippets"
 			},
 			{
+				"language": "json",
 				"path": "./snippets/eslint.code-snippets"
 			},
 			{
+				"language": "json",
 				"path": "./snippets/prettier.code-snippets"
 			},
 			{
+				"language": "json",
 				"path": "./snippets/stylelint.code-snippets"
 			},
 			{
 				"path": "./snippets/webpack.code-snippets"
 			},
 			{
+				"language": "json",
 				"path": "./snippets/settings.code-snippets"
 			}
 		]
