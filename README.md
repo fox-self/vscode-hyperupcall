@@ -53,3 +53,4 @@ cd vscode-foxxy-extension
 ## Roadmap
 
 - Import systemd intelisense code
+- Nginx
