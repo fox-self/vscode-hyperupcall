@@ -66,6 +66,17 @@
 				"configuration": "./language-configuration/i3.language-configuration.json"
 			},
 			{
+				"id": "json5",
+				"aliases": [
+					"JSON5",
+					"json5"
+				],
+				"extensions": [
+					".json5"
+				],
+				"configuration": "./language-configuration/i3.language-configuration.json"
+			},
+			{
 				"id": "ninja",
 				"aliases": [
 					"Ninja"
@@ -165,6 +176,11 @@
 				"language": "i3",
 				"scopeName": "source.i3",
 				"path": "./syntaxes/i3.tmLanguage.json"
+			},
+			{
+				"language": "json5",
+				"scopeName": "source.json5",
+				"path": "./syntaxes/json5.tmLanguage.json"
 			},
 			{
 				"language": "ninja",

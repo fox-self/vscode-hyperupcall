@@ -20,6 +20,7 @@ Syntax highlighting for
 - Desktop Files
 - dircolors
 - i3
+- JSON5
 - Ninja
 - gettext
 - sxhkdrc
@@ -44,6 +45,7 @@ cd vscode-foxxy-extension
 - [terminfo.sublime-syntax](https://github.com/zgracem/terminfo.sublime-syntax) by zgracem (MIT)
 - [xresources](https://github.com/antcap96/xresources) by antcap96 (MIT)
 - [i3wm-syntax](https://github.com/dcasella/i3wm-syntax) by dcasella (Apache-2.0)
+- [vscode-json5](https://github.com/mrmlnc/vscode-json5) by mrmlnc (MIT)
 - [vscode-ninja-syntax](https://github.com/melak47/vscode-ninja-syntax) by melak47 (MIT)
 - [sxhkdrc-syntax](https://github.com/mosbasik/sxhkdrc-syntax) by mosbasik (MIT)
 - [desktop-file-support](https://github.com/nico-castell/desktop-file-support) by nico-castell (MIT)
