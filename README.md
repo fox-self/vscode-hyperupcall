@@ -28,13 +28,6 @@ Syntax highlighting for
 - terminfo
 - Xresources
 
-## Contributing
-
-```sh
-git clone https://github.com/eankeen/vscode-foxxy-extension
-cd vscode-foxxy-extension
-```
-
 ## Acknowledgements
 
 - [comment-autocomplete](https://github.com/axetroy/vscode-comment-autocomplete) by axetroy (MIT)
@@ -51,8 +44,3 @@ cd vscode-foxxy-extension
 - [desktop-file-support](https://github.com/nico-castell/desktop-file-support) by nico-castell (MIT)
 - [vscode-gettext](https://github.com/MrOrz/vscode-gettext) by MrOrz (MIT)
 - [vscode-systemd](https://github.com/hangxingliu/vscode-systemd) by hangxingliu (MIT)
-
-## Roadmap
-
-- Import systemd intelisense code
-- Nginx
