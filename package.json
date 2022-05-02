@@ -32,6 +32,17 @@
 	"contributes": {
 		"languages": [
 			{
+				"id": "awk",
+				"aliases": [
+					"AWK",
+					"awk"
+				],
+				"extensions": [
+					".awk"
+				],
+				"configuration": "./language-configuration/awk.language-configuration.json"
+			},
+			{
 				"id": "desktop",
 				"aliases": [
 					"Desktop",
@@ -211,6 +222,11 @@
 				"language": "xdefaults",
 				"scopeName": "source.xdefaults",
 				"path": "./syntaxes/xdefaults.tmLanguage.json"
+			},
+			{
+				"language": "awk",
+				"scopeName": "source.awk",
+				"path": "./syntaxes/awk.tmLanguage.json"
 			}
 		],
 		"snippets": [

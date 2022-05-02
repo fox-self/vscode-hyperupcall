@@ -17,6 +17,7 @@ Snippets for
 
 Syntax highlighting for
 
+- AWK
 - Desktop Files
 - dircolors
 - i3
@@ -30,6 +31,7 @@ Syntax highlighting for
 
 ## Acknowledgements
 
+- [awk-sublime](https://github.com/JohnNilsson/awk-sublime) by JohnNilsson (MIT)
 - [comment-autocomplete](https://github.com/axetroy/vscode-comment-autocomplete) by axetroy (MIT)
 - [eslint-disable-snippets](https://github.com/drKnoxy/eslint-disable-snippets) by drKnoxy (MIT)
 - [stylelint-disable-snippets](https://github.com/hedinne/stylelint-disable-snippets) by hedinne (ISC)
