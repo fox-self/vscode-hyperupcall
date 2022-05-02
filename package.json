@@ -38,7 +38,8 @@
 					"awk"
 				],
 				"extensions": [
-					".awk"
+					".awk",
+					".gawk"
 				],
 				"configuration": "./language-configuration/awk.language-configuration.json"
 			},
