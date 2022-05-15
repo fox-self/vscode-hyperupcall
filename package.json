@@ -2,7 +2,7 @@
 	"name": "vscode-hyperupcall",
 	"displayName": "hyperupcall",
 	"description": "Tools picked from various extensions",
-	"version": "0.12.1",
+	"version": "0.12.2",
 	"publisher": "EdwinKofler",
 	"engines": {
 		"vscode": "^1.12.0"
