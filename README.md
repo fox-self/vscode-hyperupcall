@@ -1,5 +1,9 @@
 # Panda Utils
 
+## Deprecated
+
+Deprecated in favor of the new name: [vscode-hyperupcall](https://github.com/hyperupcall/vscode-hyperupcall). The new extension can be installed from that link
+
 ## Usage
 
 Install [extension](https://marketplace.visualstudio.com/items?itemName=EdwinKofler.vscode-panda-utils)

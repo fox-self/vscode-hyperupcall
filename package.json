@@ -1,6 +1,6 @@
 {
 	"name": "vscode-panda-utils",
-	"displayName": "Panda Utils",
+	"displayName": "Panda Utils (deprecated)",
 	"description": "Tools picked from various extensions",
 	"version": "0.11.1",
 	"publisher": "EdwinKofler",
