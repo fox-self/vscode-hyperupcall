@@ -1,6 +1,6 @@
 {
-	"name": "vscode-panda-utils",
-	"displayName": "Panda Utils (deprecated)",
+	"name": "vscode-hyperupcall",
+	"displayName": "hyperupcall",
 	"description": "Tools picked from various extensions",
 	"version": "0.11.2",
 	"publisher": "EdwinKofler",
@@ -10,10 +10,10 @@
 	"license": "BSD-3-Clause",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/hyperupcall/vscode-panda-utils"
+		"url": "https://github.com/hyperupcall/hyperupcall"
 	},
 	"bugs": {
-		"url": "https://github.com/hyperupcall/vscode-panda-utils/issues"
+		"url": "https://github.com/hyperupcall/hyperupcall/issues"
 	},
 	"author": {
 		"name": "Edwin Kofler",
