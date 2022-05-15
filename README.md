@@ -2,7 +2,7 @@
 
 ## Usage
 
-Install [extension](https://marketplace.visualstudio.com/items?itemName=EdwinKofler.hyperupcall).
+Install [extension](https://marketplace.visualstudio.com/items?itemName=EdwinKofler.vscode-hyperupcall).
 
 Snippets for
 
