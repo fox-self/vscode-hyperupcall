@@ -78,7 +78,11 @@
 				"extensions": [
 					".env",
 					".env.sample",
-					".env.example"
+					".env.example",
+					".env.development",
+					".env.staging",
+					".env.production",
+					".env.local"
 				],
 				"configuration": "./language-configuration/env.language-configuration.json"
 			},
