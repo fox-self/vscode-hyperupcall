@@ -1,128 +1,153 @@
-'use strict'
+import {
+	window,
+	languages,
+	OutputChannel,
+	ExtensionContext,
+	TextDocument,
+	TextEdit,
+	Position,
+	Range,
+	FoldingRange,
+	FoldingRangeKind,
+} from 'vscode'
 
-import VSCODE = require('vscode')
-import { schemas, ISchema } from './schema'
+export class Logger {
+	constructor(readonly output: OutputChannel) {
+		this.output = output
+	}
 
-interface IFocusArg {
-	start: VSCODE.Position
-	end: VSCODE.Position
+	log(msg: string): void {
+		const d = new Date()
+		const date = d.toISOString().split('T')[0]
+		const time = d.toTimeString().split(' ')[0]
+		const ms = (d.getMilliseconds() + '').padStart(3, '0')
+
+		this.output.appendLine(`[${date} ${time}.${ms}] ${msg}`)
+	}
+
+	dispose(): void {
+		this.output.dispose()
+	}
 }
 
-export function activate(context: VSCODE.ExtensionContext) {
-	const vs: typeof VSCODE = require('vscode')
+export function activate(context: ExtensionContext) {
+	const logger = new Logger(window.createOutputChannel('ENV'))
+	logger.log('activating extension')
 
-	vs.commands.registerCommand('comment-complete.focus', (argv: IFocusArg) => {
-		const editor = vs.window.activeTextEditor
-		if (!editor) {
-			return
-		}
-		editor.selection = new vs.Selection(argv.start, argv.end)
-	})
+	const formatEditProvider = languages.registerDocumentFormattingEditProvider(
+		'env',
+		{
+			provideDocumentFormattingEdits(document: TextDocument): TextEdit[] {
+				logger.log(`formatting ${document.fileName}`)
 
-	class CommentCompletionItem extends vs.CompletionItem {
-		constructor(
-			schema: ISchema,
-			document: VSCODE.TextDocument,
-			position: VSCODE.Position,
-		) {
-			super(schema.label, VSCODE.CompletionItemKind.Snippet)
-			const reg = /\$\{([^\}]+)\}/
+				let edits: TextEdit[] = []
 
-			this.detail = schema.detail
-			this.documentation = schema.document
-			this.insertText = schema.text.replace(reg, '$1')
+				for (let i = 0; i < document.lineCount; i++) {
+					const ln = document.lineAt(i)
+					const st = ln.range.start
+					const tx = ln.text
 
-			const line = document.lineAt(position.line).text
-			const prefix = line.slice(0, position.character).match(schema.style)
+					if (ln.isEmptyOrWhitespace) {
+						if (tx.length > 0) {
+							edits.push(TextEdit.delete(ln.range))
+						}
+						continue
+					}
 
-			// the text insert start and end
-			const start = position.translate(0, prefix ? -prefix[0].length : 0)
-			const end = position.translate(0, 0)
+					const fi = ln.firstNonWhitespaceCharacterIndex
+					const fs = new Position(i, fi)
+					if (fi > 0) {
+						// remove leading whitespace
+						edits.push(TextEdit.delete(new Range(st, fs)))
+					}
 
-			this.range = new VSCODE.Range(start, end)
+					if (tx.charAt(fi) === '#') {
+						// remove trailing whitespace in comments
+						edits.push(
+							TextEdit.replace(
+								new Range(fs, ln.range.end),
+								'# ' + tx.substring(fi + 1).trim(),
+							),
+						)
+					} else if (tx.substr(fi, 6) === 'export') {
+						// remove whitespace between export keywords
+						let ex = tx.substring(fi + 7).trim()
+						let fe = ex.indexOf('=')
+						if (fe > 0) {
+							let key = ex.substring(0, fe).trim()
+							let val = ex.substring(fe + 1).trim()
 
-			const matcher = schema.text.match(reg)
+							if (
+								val.indexOf(' ') >= 0 &&
+								val[0] !== '"' &&
+								val[val.length - 1] !== '"'
+							) {
+								val = `"${val}"`
+							}
+							edits.push(
+								TextEdit.replace(
+									new Range(fs, ln.range.end),
+									'export ' + key + '=' + val,
+								),
+							)
+						} else {
+							edits.push(
+								TextEdit.replace(new Range(fs, ln.range.end), 'export ' + ex),
+							)
+						}
+					} else {
+						// remove leading and trailing whitespace in quoted string
+						let fe = tx.indexOf('=')
+						if (fe > 0) {
+							let key = tx.substring(0, fe).trim()
+							let val = tx.substring(fe + 1).trim()
+							if (
+								val.indexOf(' ') >= 0 &&
+								val[0] !== '"' &&
+								val[val.length - 1] !== '"' &&
+								val[0] !== "'" &&
+								val[val.length - 1] !== "'"
+							) {
+								val = `"${val}"`
+							}
 
-			if (matcher) {
-				const content = matcher[1]
-				const index = matcher.index || 0
+							edits.push(
+								TextEdit.replace(new Range(fs, ln.range.end), key + '=' + val),
+							)
+						}
+					}
+				}
+				return edits
+			},
+		},
+	)
 
-				const focusStart = start.translate(0, index)
-				const focusEnd = focusStart.translate(0, +content.length)
+	const foldingRangeProvider = languages.registerFoldingRangeProvider('env', {
+		provideFoldingRanges(document) {
+			logger.log(`folding ${document.fileName}`)
 
-				this.command = {
-					title: 'focus',
-					command: 'comment-complete.focus',
-					arguments: [{ document, start: focusStart, end: focusEnd }],
+			const folds = []
+			const start = /^# /,
+				end = /^\s*$/ // regex to detect start and end of region
+
+			let inRegion = false,
+				sectionStart = 0
+			for (let i = 0; i < document.lineCount; i++) {
+				if (start.test(document.lineAt(i).text) && !inRegion) {
+					inRegion = true
+					sectionStart = i
+				} else if (end.test(document.lineAt(i).text) && inRegion) {
+					folds.push(
+						new FoldingRange(sectionStart, i - 1, FoldingRangeKind.Region),
+					)
+					inRegion = false
 				}
 			}
-		}
-	}
+			return folds
+		},
+	})
 
-	for (const s of schemas) {
-		context.subscriptions.push(
-			vs.languages.registerCompletionItemProvider(
-				(s.selector as string[]).map((v) => {
-					return {
-						scheme: 'file',
-						language: v,
-					}
-				}),
-				{
-					provideCompletionItems: (
-						document: VSCODE.TextDocument,
-						position: VSCODE.Position,
-						token: VSCODE.CancellationToken,
-					) => {
-						const completes: CommentCompletionItem[] = []
-						const line = document.lineAt(position.line).text
-						const prefix = line.slice(0, position.character)
-						for (const schema of s.schemas) {
-							// if line a new line
-							if (position.character === 1) {
-								completes.push(
-									new CommentCompletionItem(schema, document, position),
-								)
-								continue
-							}
-
-							// the the whole line match
-							if (new RegExp('^' + schema.style.source).test(line)) {
-								completes.push(
-									new CommentCompletionItem(schema, document, position),
-								)
-								continue
-							}
-
-							const validMatcher = prefix.match(schema.style)
-
-							if (validMatcher) {
-								if (validMatcher[0].length >= 2) {
-									completes.push(
-										new CommentCompletionItem(schema, document, position),
-									)
-									continue
-								}
-							}
-
-							const validRegWithSpace = new RegExp('\\s' + schema.style.source)
-							if (validRegWithSpace.test(prefix)) {
-								completes.push(
-									new CommentCompletionItem(schema, document, position),
-								)
-								continue
-							}
-						}
-						return completes
-					},
-				},
-				...s.triggerCharacters,
-			),
-		)
-	}
+	context.subscriptions.push(logger, formatEditProvider, foldingRangeProvider)
 }
 
-// this method is called when your extension is deactivated
-export function deactivate(context: VSCODE.ExtensionContext) {
-	//
-}
+export function deactivate() {}
