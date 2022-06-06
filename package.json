@@ -70,6 +70,19 @@
 				"configuration": "./language-configuration/dircolors.language-configuration.json"
 			},
 			{
+				"id": "env",
+				"aliases": [
+					"Environment Variables",
+					"dotenv"
+				],
+				"extensions": [
+					".env",
+					".env.sample",
+					".env.example"
+				],
+				"configuration": "./language-configuration/env.language-configuration.json"
+			},
+			{
 				"id": "i3",
 				"aliases": [
 					"i3_config"
@@ -185,6 +198,11 @@
 				"language": "dircolors",
 				"scopeName": "source.dircolors",
 				"path": "./syntaxes/dircolors.tmLanguage.json"
+			},
+			{
+				"language": "env",
+				"scopeName": "source.env",
+				"path": "./syntaxes/env.tmLanguage.json"
 			},
 			{
 				"language": "i3",

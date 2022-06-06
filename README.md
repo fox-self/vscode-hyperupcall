@@ -20,6 +20,7 @@ Syntax highlighting for
 - AWK
 - Desktop Files
 - dircolors
+- env
 - i3
 - JSON5
 - Ninja
@@ -37,6 +38,7 @@ Syntax highlighting for
 - [stylelint-disable-snippets](https://github.com/hedinne/stylelint-disable-snippets) by hedinne (ISC)
 - [webpack-snippets](https://github.com/LiShiSangZi/webpack-snippets) by LiShiSangZi (MIT)
 - [vscode-dircolors](https://github.com/duniul/vscode-dircolors) by duniul (MIT)
+- [vscode-env](https://github.com/IronGeek/vscode-env) by IronGeek (MIT)
 - [terminfo.sublime-syntax](https://github.com/zgracem/terminfo.sublime-syntax) by zgracem (MIT)
 - [xresources](https://github.com/antcap96/xresources) by antcap96 (MIT)
 - [i3wm-syntax](https://github.com/dcasella/i3wm-syntax) by dcasella (Apache-2.0)
