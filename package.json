@@ -305,12 +305,34 @@
 				"when": "editorTextFocus && resourceLangId == po"
 			}
 		],
-		"configuration": []
+		"configuration": {
+			"title": "SyncEnv Settings",
+			"properties": {
+				"sync-env.envSource": {
+					"type": "string",
+					"default": ".env",
+					"description": "Specifies which file is the Source file."
+				},
+				"sync-env.envDestination": {
+					"type": [
+						"string",
+						"null",
+						"array"
+					],
+					"default": [
+						".env.example"
+					],
+					"description": "Specifies the Destination file/files."
+				}
+			}
+		}
 	},
 	"devDependencies": {
 		"@types/mocha": "^9.1.1",
 		"@types/node": "^17.0.40",
 		"@types/vscode": "1.54.0",
+		"eslint": "^8.17.0",
+		"eslint-plugin-hyperupcall": "^0.1.0",
 		"prettier": "^2.5.1",
 		"typescript": "^4.7.3"
 	}
