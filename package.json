@@ -1,7 +1,7 @@
 {
 	"name": "vscode-hyperupcall",
 	"displayName": "hyperupcall",
-	"description": "Tools picked from various extensions",
+	"description": "Edwin's vscode extension",
 	"version": "0.13.0",
 	"publisher": "EdwinKofler",
 	"engines": {
@@ -31,14 +31,26 @@
 		"utils"
 	],
 	"activationEvents": [
-		"onLanguage:env"
+		"onLanguage:env",
+		"workspaceContains:**/*"
 	],
 	"scripts": {
+		"watch": "tsc -w -p ./",
 		"build": "tsc -p ./"
 	},
 	"main": "./build/extension.js",
 	"icon": "images/icon.jpg",
 	"contributes": {
+		"commands": [
+			{
+				"command": "sync-env.activateWatchers",
+				"title": "Activate watchers"
+			},
+			{
+				"command": "sync-env.deactivateWatchers",
+				"title": "Deactivate watchers"
+			}
+		],
 		"languages": [
 			{
 				"id": "awk",
@@ -92,6 +104,20 @@
 					".env.local"
 				],
 				"configuration": "./language-configuration/env.language-configuration.json"
+			},
+			{
+				"id": "handlebars",
+				"aliases": [
+					"Handlebars",
+					"handlebars"
+				],
+				"extensions": [
+					".handlebars",
+					".hbr",
+					".hbs",
+					".tpl"
+				],
+				"configuration": "language-configuration/handlebars.language-configuration.json"
 			},
 			{
 				"id": "i3",
@@ -211,9 +237,25 @@
 				"path": "./syntaxes/dircolors.tmLanguage.json"
 			},
 			{
+				"scopeName": "text.html.ejs",
+				"path": "./syntaxes/ejs.tmLanguage.json",
+				"injectTo": [
+					"text.html"
+				],
+				"embeddedLanguages": {
+					"meta.embedded.block.ejs": "ejs",
+					"meta.embedded.block.javascript": "source.js"
+				}
+			},
+			{
 				"language": "env",
 				"scopeName": "source.env",
 				"path": "./syntaxes/env.tmLanguage.json"
+			},
+			{
+				"language": "handlebars",
+				"scopeName": "text.html.handlebars",
+				"path": "./syntaxes/handlebars.tmLanguage.json"
 			},
 			{
 				"language": "i3",
@@ -270,6 +312,14 @@
 				"path": "./snippets/desktop.code-snippets"
 			},
 			{
+				"language": "html",
+				"path": "./snippets/ejs.code-snippets"
+			},
+			{
+				"language": "handlebars",
+				"path": "./snippets/handlebars.code-snippets"
+			},
+			{
 				"language": "editorconfig",
 				"path": "./snippets/editorconfig.code-snippets"
 			},
@@ -286,6 +336,7 @@
 				"path": "./snippets/stylelint.code-snippets"
 			},
 			{
+				"language": "javascript",
 				"path": "./snippets/webpack.code-snippets"
 			},
 			{
@@ -305,6 +356,14 @@
 				"when": "editorTextFocus && resourceLangId == po"
 			}
 		],
+		"configurationDefaults": {
+			"files.associations": {
+				"*.ejs": "html"
+			},
+			"emmet.includeLanguages": {
+				"ejs": "html"
+			}
+		},
 		"configuration": {
 			"title": "SyncEnv Settings",
 			"properties": {

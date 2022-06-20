@@ -1,11 +1,13 @@
 # shellcheck shell=bash
 
+task.watch() {
+	pnpm run watch
+}
+
 task.build() {
 	pnpm run build
 }
 
 task.publish() {
-	bake.assert_cmd 'vsce'
-
 	vsce publish
 }
