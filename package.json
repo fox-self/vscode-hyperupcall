@@ -10,10 +10,10 @@
 	"license": "BSD-3-Clause",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/hyperupcall/hyperupcall"
+		"url": "https://github.com/hyperupcall/vscode-hyperupcall"
 	},
 	"bugs": {
-		"url": "https://github.com/hyperupcall/hyperupcall/issues"
+		"url": "https://github.com/hyperupcall/vscode-hyperupcall/issues"
 	},
 	"author": {
 		"name": "Edwin Kofler",
