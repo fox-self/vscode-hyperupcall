@@ -86,6 +86,10 @@
 					".dircolors",
 					".dir_colors"
 				],
+				"filenames": [
+					"dircolors",
+					"dir_colors"
+				],
 				"configuration": "./language-configuration/dircolors.language-configuration.json"
 			},
 			{
