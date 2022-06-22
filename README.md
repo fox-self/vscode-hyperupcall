@@ -9,7 +9,9 @@ Snippets for
 - Basalt
 - Desktop Files
 - EditorConfig
+- EJS
 - ESLint
+- Handlebars
 - Prettier
 - `settings.json`
 - Stylelint
@@ -20,7 +22,9 @@ Syntax highlighting for
 - AWK
 - Desktop Files
 - dircolors
+- EJS
 - env
+- Handlebars
 - i3
 - JSON5
 - Ninja
@@ -49,3 +53,5 @@ Syntax highlighting for
 - [desktop-file-support](https://github.com/nico-castell/desktop-file-support) by nico-castell (MIT)
 - [vscode-gettext](https://github.com/MrOrz/vscode-gettext) by MrOrz (MIT)
 - [vscode-systemd](https://github.com/hangxingliu/vscode-systemd) by hangxingliu (MIT)
+- [ejs-grammar](https://github.com/Digitalbrainstem/ejs-grammar) by Digitalbrainstem (MIT)
+- [vscode-handlebars](https://github.com/andrejunges/vscode-handlebars) by andrejunges (MIT)
