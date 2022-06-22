@@ -1,4 +1,6 @@
-# Panda Utils
+# vscode-hyperupcall
+
+Edwin's VSCode extension
 
 ## Usage
 
