@@ -1,0 +1,9 @@
+[project]
+ecosystem = 'nodejs'
+form = 'lib'
+for = 'me'
+status = 'experimental'
+
+[discovery]
+categories = []
+tags = []
