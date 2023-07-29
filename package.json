@@ -36,6 +36,28 @@
 	"main": "./build/extension.js",
 	"icon": "images/icon.jpg",
 	"contributes": {
+		"configurationDefaults": {
+			"files.associations": {
+				"**/profiles/*/settings.json": "vscode-settings"
+			}
+		},
+		"languages": [
+			{
+				"id": "vscode-settings",
+				"aliases": [
+					"VSCode Settings",
+					"vscode-settings"
+				],
+				"configuration": "./language-configuration/vscode-settings.language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "vscode-settings",
+				"scopeName": "source.vscode-settings",
+				"path": "./syntaxes/jsonc.tmLanguage.json"
+			}
+		],
 		"commands": [
 			{
 				"command": "sync-env.activateWatchers",

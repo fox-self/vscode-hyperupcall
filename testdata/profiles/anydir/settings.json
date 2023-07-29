@@ -1,0 +1,46 @@
+{
+	// PROFILE: my-Web
+
+	//section-start: custom
+	// DENO
+	"deno.suggest.imports.autoDiscover": true,
+	"deno.suggest.completeFunctionCalls": true,
+	"deno.suggest.autoImports": true,
+	"deno.suggest.names": true,
+	"deno.inlayHints.enumMemberValues.enabled": false,
+	"deno.inlayHints.functionLikeReturnTypes.enabled": false,
+	"deno.inlayHints.parameterNames.enabled": "none",
+	"deno.inlayHints.parameterNames.suppressWhenArgumentMatchesName": false,
+	"deno.inlayHints.parameterTypes.enabled": false,
+	"deno.inlayHints.propertyDeclarationTypes.enabled": false,
+	"deno.inlayHints.variableTypes.enabled": false,
+	"deno.inlayHints.variableTypes.suppressWhenTypeMatchesName": false,
+	"svelte.enable-ts-plugin": true,
+	// EMMET
+	"emmet.excludeLanguages": [],
+	"emmet.includeLanguages": {
+		"vue-html": "html",
+		"javascript": "javascriptreact"
+	},
+	"emmet.triggerExpansionOnTab": true,
+	"editor.inlineSuggest.showToolbar": "always",
+	"symbols.hidesExplorerArrows": false,
+	"[jsonc]": {
+		"editor.quickSuggestions": {
+			"strings": true
+		},
+		"editor.suggest.insertMode": "replace"
+	},
+
+	//section-end: custom
+
+	//section-start: shared
+	// WINDOW
+	"window.title": "${folderName} (${profileName})${separator}${activeEditorMedium}${separator}${remoteName}",
+
+	"gitlens.showWhatsNewAfterUpgrades": false,
+	"java.help.firstView": "none",
+
+	//section-end: shared
+	"__hack": ""
+}

@@ -1,0 +1,31 @@
+{
+	"information_for_contributors": [
+		"https://github.com/microsoft/vscode/blob/main/extensions/json/language-configuration.json"
+	],
+	"comments": {
+		"lineComment": "//",
+		"blockComment": ["/*", "*/"]
+	},
+	"brackets": [
+		["{", "}"],
+		["[", "]"]
+	],
+	"autoClosingPairs": [
+		{ "open": "{", "close": "}", "notIn": ["string"] },
+		{ "open": "[", "close": "]", "notIn": ["string"] },
+		{ "open": "(", "close": ")", "notIn": ["string"] },
+		{ "open": "'", "close": "'", "notIn": ["string"] },
+		{ "open": "\"", "close": "\"", "notIn": ["string", "comment"] },
+		{ "open": "`", "close": "`", "notIn": ["string", "comment"] }
+	],
+	"folding": {
+		"markers": {
+			"start": "^\\s*//section-start:",
+			"end": "^\\s*//section-end:"
+		}
+	},
+	"indentationRules": {
+		"increaseIndentPattern": "({+(?=((\\\\.|[^\"\\\\])*\"(\\\\.|[^\"\\\\])*\")*[^\"}]*)$)|(\\[+(?=((\\\\.|[^\"\\\\])*\"(\\\\.|[^\"\\\\])*\")*[^\"\\]]*)$)",
+		"decreaseIndentPattern": "^\\s*[}\\]],?\\s*$"
+	}
+}
