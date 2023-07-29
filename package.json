@@ -2,7 +2,7 @@
 	"name": "vscode-hyperupcall",
 	"displayName": "hyperupcall",
 	"description": "Edwin's vscode extension",
-	"version": "0.16.0",
+	"version": "0.17.0",
 	"publisher": "EdwinKofler",
 	"engines": {
 		"vscode": "^1.54.0"
