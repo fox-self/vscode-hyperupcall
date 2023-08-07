@@ -10,31 +10,21 @@
 	"license": "BSD-3-Clause",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/hyperupcall/vscode-hyperupcall"
+		"url": "https://github.com/fox-land/vscode-hyperupcall"
 	},
 	"bugs": {
-		"url": "https://github.com/hyperupcall/vscode-hyperupcall/issues"
+		"url": "https://github.com/fox-land/vscode-hyperupcall/issues"
 	},
 	"author": {
 		"name": "Edwin Kofler",
 		"url": "https://edwinkofler.com"
 	},
 	"categories": [],
-	"keywords": [
-		"Linux",
-		"panda",
-		"utils"
-	],
-	"activationEvents": [
-		"onLanguage:env",
-		"workspaceContains:**/*"
-	],
 	"scripts": {
 		"watch": "tsc -w -p ./",
 		"build": "tsc -p ./"
 	},
-	"main": "./build/extension.js",
-	"icon": "images/icon.jpg",
+	"icon": "assets/icon.jpg",
 	"contributes": {
 		"configurationDefaults": {
 			"files.associations": {
@@ -73,10 +63,6 @@
 				"path": "./snippets/basalt.code-snippets"
 			},
 			{
-				"language": "desktop",
-				"path": "./snippets/desktop.code-snippets"
-			},
-			{
 				"language": "editorconfig",
 				"path": "./snippets/editorconfig.code-snippets"
 			},
@@ -95,10 +81,6 @@
 			{
 				"language": "javascript",
 				"path": "./snippets/webpack.code-snippets"
-			},
-			{
-				"language": "json",
-				"path": "./snippets/settings.code-snippets"
 			}
 		],
 		"keybindings": [
@@ -136,6 +118,7 @@
 		}
 	},
 	"devDependencies": {
+		"@hyperupcall/prettier-config": "^0.6.0",
 		"@types/mocha": "^9.1.1",
 		"@types/node": "^20.4.5",
 		"@types/vscode": "1.54.0",

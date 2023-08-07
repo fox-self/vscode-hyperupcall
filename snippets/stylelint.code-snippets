@@ -13,17 +13,17 @@
 		]
 	},
 	"stylelint-disable-line": {
-		"prefix": "stylelint-disable-line",
+		"prefix": "decl:stylelint-disable-line",
 		"body": ["$BLOCK_COMMENT_START stylelint-disable-line ${0:rule} */"]
 	},
 	"stylelint-disable-next-line": {
-		"prefix": "stylelint-disable-next-line",
+		"prefix": "decl:stylelint-disable-next-line",
 		"body": [
 			"$BLOCK_COMMENT_START stylelint-disable-next-line ${0:rule} $BLOCK_COMMENT_END"
 		]
 	},
 	"stylelint-disable-block": {
-		"prefix": "stylelint-disable-block",
+		"prefix": "decl:stylelint-disable-block",
 		"body": [
 			"$BLOCK_COMMENT_START stylelint-disable ${0:rule} $BLOCK_COMMENT_END",
 			"$TM_SELECTED_TEXT",

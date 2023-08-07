@@ -1,22 +1,14 @@
 {
 	"prettier-config": {
 		"prefix": "prettier-config",
-		"body": [
-			"{",
-			"\t\"useTabs\": true,",
-			"\t\"semi\": false,",
-			"\t\"singleQuote\": true,",
-			"\t\"trailingComma\": \"all\"",
-			"}",
-			""
-		]
+		"body": ["\"@hyperupcall/prettier-config\"", ""]
 	},
 	"prettier-ignore": {
-		"prefix": "prettier-ignore",
+		"prefix": "decl:prettier-ignore",
 		"body": ["$LINE_COMMENT prettier-ignore"]
 	},
 	"prettier-ignore-embedded": {
-		"prefix": "prettier-ignore-embedded",
+		"prefix": "decl:prettier-ignore-embedded",
 		"body": ["$BLOCK_COMMENT_START prettier-ignore $BLOCK_COMMENT_END"]
 	}
 }

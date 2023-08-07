@@ -10,5 +10,5 @@ task.build() {
 
 task.publish() {
 	vsce publish
-	ovsx publish --pat "$(<'../../.env-ovsx')"
+	ovsx publish --pat "$(<'.env-ovsx')"
 }
