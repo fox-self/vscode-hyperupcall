@@ -1,8 +1,6 @@
 # vscode-hyperupcall
 
-Edwin's VSCode extension
-
-The syntax highlighting of multiple languages has been moved to [vscode-assorted-languages](https://github.com/hyperupcall/vscode-assorted-languages)
+Edwin's VSCode extension.
 
 ## Acknowledgements
 

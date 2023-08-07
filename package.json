@@ -118,17 +118,15 @@
 		}
 	},
 	"devDependencies": {
+		"@hyperupcall/eslint-config": "^0.3.0",
 		"@hyperupcall/prettier-config": "^0.6.0",
 		"@types/mocha": "^9.1.1",
 		"@types/node": "^20.4.5",
 		"@types/vscode": "1.54.0",
 		"eslint": "^8.18.0",
-		"eslint-plugin-hyperupcall": "^0.1.0",
 		"prettier": "^3.0.0",
-		"typescript": "^5.1.6"
-	},
-	"dependencies": {
-		"@vscode/vsce": "^2.20.0",
-		"ovsx": "^0.8.2"
+		"typescript": "^5.1.6",
+		"ovsx": "^0.8.2",
+		"@vscode/vsce": "^2.20.0"
 	}
 }
