@@ -5,8 +5,7 @@
 			"{",
 			"\t\"plugins\": [],",
 			"\t\"extends\": [",
-			"\t\t\"stylelint-config-recommended\",",
-			"\t\t\"stylelint-config-standard\"",
+			"\t\t\"@hyperupcall/stylelint-config\""
 			"\t]",
 			"}",
 			""
